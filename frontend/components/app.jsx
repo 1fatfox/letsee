@@ -1,17 +1,9 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import {
-  Route,
-  Redirect,
-  Switch,
-  Link,
-  HashRouter
-} from 'react-router-dom';
 
-const App = () => {
+const App = () => (
   <div>
-    {"hey"}
-  </div>;
-};
+    <h1>letsee</h1>
+  </div>
+);
 
 export default App;
