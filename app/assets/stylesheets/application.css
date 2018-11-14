@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+
+header .letsee_logo {
+  display: block;
+  font-size: 35px;
+  font-family: "Guardian Text Egyptian Web 400", Georgia, serif;
+  font-weight: normal;
+  color: #ff6707;
+}

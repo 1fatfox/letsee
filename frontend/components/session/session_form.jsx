@@ -33,10 +33,10 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    let header = <h2>Sign In To Continue</h2>;
+    let header_direct = <h2>Sign In To Continue</h2>;
     let first_name_input;
     if (this.props.formType == 'signup') {
-      header = <h2>Sign up to Continue</h2>;
+      header_direct = <h2>Create Your Account</h2>;
       first_name_input = (
         <label>First name
           &nbsp;&nbsp;
@@ -51,7 +51,7 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          {header}
+          {header_direct}
           <br/>
           {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
