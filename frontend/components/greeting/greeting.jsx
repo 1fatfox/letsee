@@ -6,9 +6,9 @@ const Greeting = ({ currentUser, logout }) => {
     <nav className="login-signup">
       <Link to="/login">Sell on Etsy</Link>
         &nbsp;&nbsp;
+      <Link to="/signup">Register</Link>
+        &nbsp;&nbsp;
       <Link to="/login">Sign in</Link>
-      &nbsp;&nbsp;
-        <Link to="/signup">Register</Link>
     </nav>
   );
   const personalGreeting = () => (
