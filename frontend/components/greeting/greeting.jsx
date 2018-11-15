@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Dropdown from './user_dropdown_container';
 
 
 const Greeting = ({ currentUser, logout, openModal }) => {
@@ -21,11 +21,10 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   const personalGreeting = () => (
       <hgroup className="header-group">
         <h1 className='letsee_logo'>letsee</h1>
-        <nav className="header-right">
-          <Link to="api/products/new">Sell on Etsy</Link>
-          <h2 className="header-you-dropdown">You</h2>
-          <button className="header-logout-button" onClick={logout}>Log Out</button>
-        </nav>
+        <div className="header-right">
+          <Link to="products/new">Sell on Etsy</Link>
+          <div className="dropdown"><Dropdown/></div>
+      </div>
       </hgroup>
   );
 
