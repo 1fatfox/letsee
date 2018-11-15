@@ -9,9 +9,7 @@ import { AuthRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <i className="fab fa-etsy"></i>
       <h1 className='letsee_logo'>letsee</h1>
-
     <GreetingContainer />
     </header>
 
