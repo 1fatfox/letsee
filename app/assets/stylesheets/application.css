@@ -15,58 +15,79 @@
  */
 
 
-header .letsee_logo {
+.letsee_logo {
   display: inline-block;
   float: left;
   font-size: 35px;
   font-family: "Guardian Text Egyptian Web 400", Georgia, serif;
+  font-weight: lighter;
+  color: #f45800;
+  text-align: left;
+}
+
+.login-signup-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 18px;
+  max-width: 1220px;
+  border-bottom: 1px solid lightgray;
+  margin: auto;
+  height: 60px;
+}
+
+.nav-right {
+  font-family: Georgia, serif;
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+  margin-top: 13px;
+  line-height: 15px;
+}
+
+
+.login-signup-nav button {
   font-weight: normal;
-  color: #ff6707;
-  height: 80px;
-  padding-left: 30px;
-  line-height: 65px;
-  margin: 0px;
-}
-
- .login-signup-nav {
-  display: inline-block;
   float: right;
-  font-size: 17px;
-  height: 80px;
-  line-height: 80px;
-  padding-right: 34px;
+  font-size: 14px;
+  padding-right: 15px;
   color: black;
-}
-
-.login-signup-nav a {
   text-decoration: none;
   color: black;
+  text-align: center;
 }
-.login-signup-nav a:hover {
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-two-logins button {
+  border: none;
+}
+
+.first-two-logins button:hover {
   text-decoration: underline;
   color: black;
 }
 
-.header-group {
-
-}
-.login-button {
-  border-color: black 2px;
-  border-radius: 10;
+.sign-in-login button {
+  border-radius: 3px;
+  border: 1px solid black;
 }
 
-.login-button a:hover {
+.sign-in-login button:hover {
   background-color: black;
+  text-decoration: none;
   color: white;
 }
-
 
 .header-group {
   display: inline;
   font-size: 17px;
-  height: 80px;
-  line-height: 80px;
-  padding-right: 34px;
+  height: 30px;
+  line-height: 30px;
+  padding-right: 20px;
   text-decoration: none;
   color: black;
 }
@@ -77,13 +98,43 @@ header .letsee_logo {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
 
 .modal-child {
+  height: 682px;
+  width: 326px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.login-form-container {
+  font-weight: lighter;
+  color: black;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.header-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 18px;
+  max-width: 1220px;
+  border-bottom: 1px solid lightgray;
+  margin: auto;
+  height: 60px;
+}
+
+.header-right {
+  font-family: Georgia, serif;
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+  margin-top: 13px;
+  line-height: 15px;
 }

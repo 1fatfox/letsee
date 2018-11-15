@@ -35,6 +35,13 @@ class SessionForm extends React.Component {
   render() {
     let header_direct = <h2>Sign In To Continue</h2>;
     let first_name_input;
+    let submit_button = (
+      <input
+        className="session-submit"
+        type="submit"
+        value="Sign in"
+      />
+    );
     if (this.props.formType == 'signup') {
       header_direct = <h2>Create Your Account</h2>;
       first_name_input = (
@@ -43,9 +50,16 @@ class SessionForm extends React.Component {
           <input type="text"
             value={this.state.first_name}
             onChange={this.update('first_name')}
-            className="login-input"
+            className="login-input-name"
           />
         </label>
+      );
+      submit_button = (
+        <input
+          className="session-submit"
+          type="submit"
+          value="Register"
+        />
       );
     }
     return (
@@ -62,21 +76,26 @@ class SessionForm extends React.Component {
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="login-input"
+                className="login-input-email"
               />
             </label>
             <br/>
+            &nbsp;&nbsp;
             {first_name_input}
+            &nbsp;&nbsp;
+            <br/>
+            <br/>
+            &nbsp;&nbsp;
             <label>Password
             &nbsp;&nbsp;
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                className="login-input-password"
               />
             </label>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            {submit_button}
           </div>
         </form>
       </div>
