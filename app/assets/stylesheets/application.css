@@ -17,6 +17,7 @@
 
 header .letsee_logo {
   display: inline-block;
+  float: left;
   font-size: 35px;
   font-family: "Guardian Text Egyptian Web 400", Georgia, serif;
   font-weight: normal;
@@ -30,7 +31,7 @@ header .letsee_logo {
  .login-signup-nav {
   display: inline-block;
   float: right;
-  font-size: 16px;
+  font-size: 17px;
   height: 80px;
   line-height: 80px;
   padding-right: 34px;
@@ -39,9 +40,11 @@ header .letsee_logo {
 
 .login-signup-nav a {
   text-decoration: none;
+  color: black;
 }
 .login-signup-nav a:hover {
   text-decoration: underline;
+  color: black;
 }
 
 .header-group {
@@ -60,10 +63,27 @@ header .letsee_logo {
 
 .header-group {
   display: inline;
-  font-size: 16px;
+  font-size: 17px;
   height: 80px;
   line-height: 80px;
   padding-right: 34px;
   text-decoration: none;
   color: black;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

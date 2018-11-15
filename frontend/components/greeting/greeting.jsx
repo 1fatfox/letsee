@@ -6,19 +6,23 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="login-signup-nav">
-      <Link to="/login">Sell on Etsy</Link>
+      <h1 className='letsee_logo'>letsee</h1>
+      <button onClick={() => openModal('login')}>Sell on Etsy</button>
         &nbsp;&nbsp;
-      <Link to="/signup">Register</Link>
+      <button onClick={() => openModal('signup')}>Register</button>
         &nbsp;&nbsp;
-      <Link className="login-button" to="/login">Sign in</Link>
+      <button onClick={() => openModal('login')}>Sign in</button>
     </nav>
   );
   const personalGreeting = () => (
-    <hgroup className="header-group">
-      <Link to="api/products/new">Sell on Etsy</Link>
-      <h2 className="header-you-dropdown">You</h2>
-      <button className="header-logout-button" onClick={logout}>Log Out</button>
-    </hgroup>
+      <hgroup className="header-group">
+        <h1 className='letsee_logo'>letsee</h1>
+        <nav className="header-group-logged-in">
+          <Link to="api/products/new">Sell on Etsy</Link>
+          <h2 className="header-you-dropdown">You</h2>
+          <button className="header-logout-button" onClick={logout}>Log Out</button>
+        </nav>
+      </hgroup>
   );
 
   return currentUser ? personalGreeting() : sessionLinks();
