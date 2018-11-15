@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Greeting = ({ currentUser, logout }) => {
+const Greeting = ({ currentUser, logout, openModal }) => {
   const sessionLinks = () => (
     <nav className="login-signup-nav">
       <h1 className='letsee_logo'>letsee</h1>
