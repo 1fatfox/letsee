@@ -34,7 +34,7 @@
   justify-content: space-between;
   padding-left: 18px;
   max-width: 1220px;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #e2e2e2;
   margin: auto;
   height: 69px;
   line-height: 35px;
@@ -52,7 +52,6 @@
 
 .login-signup-nav button {
   font-weight: normal;
-  float: right;
   font-size: 14px;
   padding-right: 15px;
   color: black;

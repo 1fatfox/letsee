@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
+import { logout, demoSignUp } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 import Greeting from './greeting';
+import { withRouter } from 'react-router-dom'
 
 const msp = ({ session, entities: { users } }) => {
   return {
@@ -11,7 +12,8 @@ const msp = ({ session, entities: { users } }) => {
 
 const mdp = dispatch => ({
   logout: () => dispatch(logout()),
-  openModal: modal => dispatch(openModal(modal))
+  openModal: modal => dispatch(openModal(modal)),
+  demoSignUp: () => dispatch(demoSignUp())
 });
 
-export default connect(msp, mdp)(Greeting);
+export default withRouter(connect(msp, mdp)(Greeting));

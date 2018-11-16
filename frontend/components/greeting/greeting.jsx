@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import Dropdown from './user_dropdown_container';
 
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
   const sessionLinks = () => (
     <nav className="login-signup-nav">
       <h1 className='letsee_logo'>letsee</h1>
       <div className='nav-right'>
         <div className="first-two-logins">
+          <button className="demo-login" onClick={() => demoSignUp()}>Demo</button>
           <button  onClick={() => openModal('login')}>Sell on Etsy</button>
           <button onClick={() => openModal('signup')}>Register</button>
         </div>
