@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    let header_direct = <h2>Sign In To Continue</h2>;
+    let header_direct = <h2 className="modal-header">Sign In To Continue</h2>;
     let first_name_input;
     let submit_button = (
       <input
@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
       />
     );
     if (this.props.formType == 'signup') {
-      header_direct = <h2>Create Your Account</h2>;
+      header_direct = <h2 className="modal-header">Create Your Account</h2>;
       first_name_input = (
         <label>First name
           &nbsp;&nbsp;
@@ -65,7 +65,6 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <div onClick={this.props.closeModal} className="close-x">X</div>
           {header_direct}
           <br/>
           {this.renderErrors()}
@@ -95,7 +94,9 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            {submit_button}
+            <div className="user-submitibutton">
+              {submit_button}
+            </div>
           </div>
         </form>
       </div>
