@@ -84,7 +84,7 @@ class SessionForm extends React.Component {
                 className="login-input-password"
               />
             </label>
-            <div className="user-submitibutton">
+            <div className="user-submit-button">
               {submit_button}
             </div>
             <h2 className="modal-mid-border" ><span>OR</span></h2>
