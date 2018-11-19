@@ -24,7 +24,10 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
         <h1 className='letsee_logo'>letsee</h1>
         <div className="header-right">
           <Link to="products/new">Sell on Etsy</Link>
-          <div className="dropdown"><Dropdown/></div>
+          <div className="dropdown">
+            <img className="you-dropdown-image" src={window.YouDropdownUrl}></img>
+            <Dropdown/>
+          </div>
       </div>
       </hgroup>
   );

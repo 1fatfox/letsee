@@ -23,8 +23,13 @@ class UserDropdown extends Component {
      if (this.state.showMenu) {
        you_dropdown = (
         <div className="menu">
-          <h2>{this.props.currentUser.first_name}</h2>
-          <button onClick={this.props.logout}>Sign Out</button>
+          <div className= "top-dropdown">
+            <img className="you-droppeddown-image" src={window.YouDropdownUrl}></img>
+            <h2 className="dropdown-name" >{this.props.currentUser.first_name}</h2>
+          </div>
+          <div className="dropdown-signout-background">
+            <button className="dropdown-signout" onClick={this.props.logout}>Sign Out</button>
+          </div>
         </div>
       );
     } else {
@@ -33,7 +38,7 @@ class UserDropdown extends Component {
 
     return (
       <div>
-        <button onClick={this.toggleMenu}>
+        <button className="you-dropdown-text" onClick={this.toggleMenu}>
           You
         </button>
           {you_dropdown}

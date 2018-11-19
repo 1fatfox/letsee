@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 class ProductIndexItem extends React.Component {
   render () {
     const product = this.props.product;
-    // debugger
     return (
       <div className="product-index-item">
         <Link className="index-productId" to={`/products/${product.id}`}>
