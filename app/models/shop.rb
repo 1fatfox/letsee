@@ -13,7 +13,7 @@ class Shop < ApplicationRecord
   validates :name, :user_id, presence: true
 
   belongs_to :owner,
-    foreign_key: :shop_id,
+    foreign_key: :user_id,
     class_name: 'User'
 
   has_many :products,

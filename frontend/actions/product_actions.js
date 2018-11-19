@@ -57,9 +57,9 @@ export const updateProduct = (product) => dispatch => {
   );
 };
 
-export const deleteProduct = (id) => dispatch => {
-  return API.deleteProduct(id).then(
-    product => dispatch(removeProduct(id)),
+export const deleteProduct = (productId) => dispatch => {
+  return API.deleteProduct(productId).then(
+    product => dispatch(removeProduct(productId)),
     error => dispatch(receiveProductErrors(error.responseJSON))
   );
 };

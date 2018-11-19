@@ -20,8 +20,9 @@ class Product < ApplicationRecord
     foreign_key: :shop_id,
     class_name: 'Shop'
 
-  belongs_to :owner,
+  has_one :user,
     through: :shop,
     source: :owner
+
 
 end
