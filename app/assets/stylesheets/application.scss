@@ -23,8 +23,8 @@
   font-weight: lighter;
   color: #f45800;
   text-align: left;
-  margin-top: 16px;
-  margin-left: 17px;
+  margin-top: 22px;
+  margin-left: 18px;
 }
 
 .login-signup-nav {
@@ -33,10 +33,9 @@
   font-weight:100;
   justify-content: space-between;
   padding-left: 18px;
-  max-width: 1220px;
+  max-width: 1350px;
   border-bottom: 1px solid #e2e2e2;
-  margin: auto;
-  height: 69px;
+  height: 80px;
   line-height: 35px;
 }
 
@@ -67,7 +66,7 @@
 
 
 .first-two-logins button {
-  margin-top: 21px;
+  margin-top: 30px;
   border: none;
 }
 
@@ -81,20 +80,13 @@
   border: 1px solid black;
   padding: 6px;
   margin-bottom: 10px;
-  margin-top: 15px;
+  margin-top: 23px;
 }
 
 .sign-in-login button:hover {
   background-color: #3c3c3c;
   text-decoration: none;
   color: white;
-}
-
-.header-group {
-  display: inline;
-  height: 35px;
-  line-height: 35px;
-  padding-right: 20px;
 }
 
 .modal-background {
@@ -232,11 +224,12 @@
   flex-direction: row;
   justify-content: space-between;
   padding-left: 18px;
-  max-width: 1220px;
+  max-width: 1350px;
   border-bottom: 1px solid lightgray;
-  margin: auto;
-  height: 69px;
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  height: 80px;
+  padding-right: 20px;
+  line-height: 35px;
 }
 
 .header-right {
@@ -256,7 +249,16 @@
   text-decoration: none;
   font-size: 14px;
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
-  margin-top: 5px;
+  margin-top: 10px;
+}
+
+.you-dropdown-image {
+  background-image: image-url("you_dropdown.png");
+  width: 22px;
+  height: 22px;
+  background-size: cover;
+  border-radius: 100%;
+  border: 1px solid lightgray;
 }
 
 .header-right button {
@@ -267,8 +269,71 @@
 }
 
 .dropdown {
-  margin-top: 5px;
   margin-right: 40px;
   margin-left: 20px;
+  background: white;
+  padding-left: 10px;
+  border-left: 1px solid lightgray;
+  height: 40px;
+  color: rgb(89, 89, 89);
+  font-size: 12px;
+  z-index: 100;
+}
+
+.menu {
   background-color: white;
+  border: 1px solid lightgray;
+  text-decoration: none;
+  width: 280px;
+  height: 343px;
+}
+
+.you-dropdown-text {
+  border-left: none;
+}
+
+.dropdown-name {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.dropdown-signout {
+  border-left: none;
+  font-size: 14px;
+  width: 240px;
+  height: 1px;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+.dropdown-signout-background {
+  margin-top: 180px;
+  border-top: 1px solid lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.dropdown-signout:hover {
+  background-color: #f2f2f2;
+}
+
+
+.you-droppeddown-image {
+  background-image: image-url("you_dropdown.png");
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  border-radius: 100%;
+  border: 1px solid lightgray;
+}
+
+.top-dropdown {
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
 }
