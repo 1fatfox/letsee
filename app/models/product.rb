@@ -24,5 +24,7 @@ class Product < ApplicationRecord
     through: :shop,
     source: :owner
 
+  has_one_attached :image
+
 
 end
