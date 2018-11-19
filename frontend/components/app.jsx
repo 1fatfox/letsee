@@ -13,8 +13,10 @@ const App = () => (
     <Modal />
     <header>
       <GreetingContainer />
-      <ProductIndexContainer />
     </header>
+    <div className="body">
+      <ProductIndexContainer />
+    </div>
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
   </div>

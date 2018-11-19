@@ -21,7 +21,7 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
   );
   const personalGreeting = () => (
       <hgroup className="header-group">
-        <h1 className='letsee_logo'>letsee</h1>
+        <Link to="/" className='letsee_logo'>letsee </Link>
         <div className="header-right">
           <Link to="products/new">Sell on Etsy</Link>
           <div className="dropdown">
