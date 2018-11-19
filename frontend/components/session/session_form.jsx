@@ -33,20 +33,19 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    let header_direct = <h2 className="modal-header">Sign In To Continue</h2>;
+    let header_direct = <h2 className="modal-header">Sign in to continue</h2>;
     let first_name_input;
     let submit_button = (
       <input
-        className="session-submit"
+        className="session-submit-button"
         type="submit"
         value="Sign in"
       />
     );
     if (this.props.formType == 'signup') {
-      header_direct = <h2 className="modal-header">Create Your Account</h2>;
+      header_direct = <h2 className="modal-header">Create your account</h2>;
       first_name_input = (
         <label>First name
-          &nbsp;&nbsp;
           <input type="text"
             value={this.state.first_name}
             onChange={this.update('first_name')}
@@ -56,7 +55,7 @@ class SessionForm extends React.Component {
       );
       submit_button = (
         <input
-          className="session-submit"
+          className="session-submit-button"
           type="submit"
           value="Register"
         />
@@ -66,10 +65,8 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           {header_direct}
-          <br/>
           {this.renderErrors()}
           <div className="login-form">
-            <br/>
             <label>Email address
             &nbsp;&nbsp;
               <input type="text"
@@ -78,13 +75,7 @@ class SessionForm extends React.Component {
                 className="login-input-email"
               />
             </label>
-            <br/>
-            &nbsp;&nbsp;
             {first_name_input}
-            &nbsp;&nbsp;
-            <br/>
-            <br/>
-            &nbsp;&nbsp;
             <label>Password
             &nbsp;&nbsp;
               <input type="password"
@@ -93,10 +84,11 @@ class SessionForm extends React.Component {
                 className="login-input-password"
               />
             </label>
-            <br/>
             <div className="user-submitibutton">
               {submit_button}
             </div>
+            <h2 className="modal-mid-border" ><span>OR</span></h2>
+            <button className="modal-demo-login" onClick={() => demoSignUp()}>Demo</button>
           </div>
         </form>
       </div>
