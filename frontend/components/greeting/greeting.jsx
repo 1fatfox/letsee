@@ -7,10 +7,10 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
   const sessionLinks = () => (
     <div>
       <nav className="login-signup-nav">
-        <h1 className='letsee_logo'>letsee</h1>
+        <Link className='letsee_logo' to="/">letsee</Link>
         <div className='nav-right'>
           <div className="first-two-logins">
-            <button className="demo-login" onClick={() => demoSignUp()}>Demo</button>
+            <button className="demo-nav-button" onClick={() => demoSignUp()}>Demo</button>
             <button  onClick={() => openModal('login')}>Sell on Etsy</button>
             <button onClick={() => openModal('signup')}>Register</button>
           </div>
@@ -19,9 +19,8 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
           </div>
         </div>
       </nav>
-      <h2 className= "etsy-banner">
-      If it’s handcrafted, vintage, custom, or unique, it’s on Etsy.
-      </h2>
+      <h2 className= "etsy-banner" ><span>If it’s handcrafted, vintage, custom, or unique, it's on letsee.</span>
+    </h2>
     </div>
 
   );
@@ -37,9 +36,9 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
           </div>
         </div>
       </hgroup>
-      <h2 className= "etsy-banner">
-        If it’s handcrafted, vintage, custom, or unique, it’s on Etsy.
-      </h2>
+      <h2 className= "etsy-banner" >
+      <span className="etsy-banner-span">If it’s handcrafted, vintage, custom, or unique, it's on letsee.</span>
+    </h2>
     </div>
   );
 

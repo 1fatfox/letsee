@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -35,6 +35,15 @@ class SessionForm extends React.Component {
   render() {
     let header_direct = <h2 className="modal-header">Sign in to continue</h2>;
     let first_name_input;
+
+    let already_a_user = (
+      <button
+        className="already-a-user"
+        onClick={() => this.props.closeModal()}
+        >No account?  Register
+      </button>
+    );
+
     let submit_button = (
       <input
         className="session-submit-button"
@@ -42,6 +51,7 @@ class SessionForm extends React.Component {
         value="Sign in"
       />
     );
+
     if (this.props.formType == 'signup') {
       header_direct = <h2 className="modal-header">Create your account</h2>;
       first_name_input = (
@@ -59,6 +69,9 @@ class SessionForm extends React.Component {
           type="submit"
           value="Register"
         />
+      );
+      already_a_user  = (
+        <button className="already-a-user" onClick={() => this.props.closeModal()} >Have an account?  Sign in</button>
       );
     }
     return (
@@ -88,7 +101,8 @@ class SessionForm extends React.Component {
               {submit_button}
             </div>
             <h2 className="modal-mid-border" ><span>OR</span></h2>
-            <button className="modal-demo-login" onClick={() => demoSignUp()}>Demo</button>
+            <button className="modal-demo-login-button" onClick={() => demoSignUp()}>Demo</button>
+            {already_a_user}
           </div>
         </form>
       </div>

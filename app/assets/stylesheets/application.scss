@@ -25,6 +25,7 @@
   text-align: left;
   margin-top: 22px;
   margin-left: 18px;
+  margin-right: 10px;
 }
 
 .login-signup-nav {
@@ -36,6 +37,7 @@
   border-bottom: 1px solid #e2e2e2;
   height: 80px;
   line-height: 35px;
+  min-width: 1000px;
 }
 
 .nav-right {
@@ -76,7 +78,7 @@
 .sign-in-login button {
   border-radius: 3px;
   border: 1px solid black;
-  padding: 6px;
+  padding: 6px 9px;
   margin-bottom: 10px;
   margin-top: 23px;
 }
@@ -124,10 +126,10 @@
 }
 
 .modal-header {
-  margin-top: 25px;
+  margin-top: 24px;
   font-size: 22px;
   font-weight: 500;
-  padding-bottom: 40px;
+  padding-bottom: 34px;
   font-family:"Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   text-rendering: optimizeLegibility;
 }
@@ -165,13 +167,16 @@
   line-height: 0.1em;
   margin: 10px 0 20px;
   font-size: 14px;
-  padding-top: 20px;
+  padding-top: 12px;
   font-family:"Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
 }
 
 .modal-mid-border span {
     background: #fff;
     padding: 0 10px;
+    width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .session-submit-button {
@@ -179,24 +184,45 @@
   color: white;
   text-align: center;
   font-size: 16px;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  margin-top: 8px;
+  margin-bottom: 26px;
   width: 95%;
 }
 
-.modal-demo-login {
+.modal-demo-login-button {
   text-align: center;
   font-size: 16px;
-  margin-top: 35px;
+  margin-top: 28px;
   width: 95%;
   height: 48px;
   border-radius: 4px;
   font-family:"Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   font-weight: normal;
+  border: 1px solid lightgray;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.modal-demo-login-button:hover {
+  background-color: lightgray;
+  color:#3c3c3c;
 }
 
 .user-submit-button input:hover {
   background-color: #3c3c3c;
+}
+
+.already-a-user {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 34px;
+  align-items: baseline;
+  width: 95%;
+  font-family:"Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: normal;
+  box-shadow: none;
+  text-decoration: none;
+  border: none;
 }
 
 
@@ -326,8 +352,10 @@
   display: flex;
 }
 
+
 .etsy-banner {
   margin-top: 57px;
+  margin-bottom: 57px;
   border-top: 1px solid lightgray;
   text-align: center;
   font-size: 32px;

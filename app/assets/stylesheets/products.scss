@@ -9,6 +9,8 @@
   width: 120px;
   height: 150px;
   margin: 10px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .product-index {
@@ -17,4 +19,18 @@
   justify-content: space-between;
   width: 100%;
   overflow: scroll;
+}
+
+.index-productImage {
+
+}
+
+.index-productTitle {
+  margin: 10px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.index-productPrice {
+  margin: 10px;
 }
