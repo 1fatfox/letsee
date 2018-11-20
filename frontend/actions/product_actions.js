@@ -3,6 +3,7 @@ export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS";
 export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 export const RECEIVE_PRODUCT_ERRORS = "RECEIVE_PRODUCT_ERRORS";
+export const CLEAR_PRODUCT_ERRORS = "CLEAR_PRODUCT_ERRORS";
 
 export const receiveProducts = (products) => {
   return {
@@ -28,6 +29,11 @@ const receiveProductErrors = (errors) =>({
     type: RECEIVE_PRODUCT_ERRORS,
     errors
 });
+
+const clearProductErrors = () => ({
+  type: CLEAR_PRODUCT_ERRORS
+});
+
 
 export const fetchProducts = () => dispatch => {
   return APIUtil.fetchProducts().then(

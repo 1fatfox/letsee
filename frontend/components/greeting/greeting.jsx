@@ -19,8 +19,11 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
           </div>
         </div>
       </nav>
-      <h2 className= "etsy-banner" ><span>If it’s handcrafted, vintage, custom, or unique, it's on letsee.</span>
-    </h2>
+      <h2 className= "etsy-banner" >
+        <ul>
+          <li className="etsy-banner-span">If it’s handcrafted, vintage, custom, or unique, it's on letsee. </li>
+        </ul>
+      </h2>
     </div>
 
   );
@@ -36,9 +39,7 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
           </div>
         </div>
       </hgroup>
-      <h2 className= "etsy-banner" >
-      <span className="etsy-banner-span">If it’s handcrafted, vintage, custom, or unique, it's on letsee.</span>
-    </h2>
+    <h2 className= "etsy-banner"></h2>
     </div>
   );
 

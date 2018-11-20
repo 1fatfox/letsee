@@ -3,7 +3,7 @@ class Api::ProductsController < ApplicationController
    def create
      @product = Product.new(product_params)
      if @product.save
-       render 'api/products/show'
+       render :show
      else
        render json: @product.errors.full_messages, status: 422
      end
@@ -11,6 +11,7 @@ class Api::ProductsController < ApplicationController
 
    def index
     @products = Product.all
+    render :index
    end
 
    def show
@@ -20,7 +21,7 @@ class Api::ProductsController < ApplicationController
    def update
      @product = Product.find_by(id: params[:id])
      if @product.update(product_params)
-       render 'api/products/show'
+       render :show
      else
        render json: @product.errors.full_messages, status: 422
      end
@@ -29,7 +30,7 @@ class Api::ProductsController < ApplicationController
    def destroy
      @product = Product.find_by(id: params[:id])
      if @product.destroy
-       render 'api/products/show'
+       render :show
      else
        render json: @product.errors.full_messages, status: 422
      end
@@ -38,7 +39,7 @@ class Api::ProductsController < ApplicationController
    private
 
    def product_params
-     params.require(:product).permit(:title, :description, :image_url, :price, :shop_id)
+     params.require(:product).permit(:title, :description, :price, :shop_id, :image)
    end
 
 end

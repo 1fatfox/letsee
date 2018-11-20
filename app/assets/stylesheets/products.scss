@@ -3,16 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.product-index-item {
-  border: 1px solid black;
-  display: inline-block;
-  width: 120px;
-  height: 150px;
-  margin: 10px;
-  margin-left: 24px;
-  margin-right: 24px;
-}
-
 .product-index {
   display: flex;
   flex-direction: row;
@@ -21,16 +11,46 @@
   overflow: scroll;
 }
 
-.index-productImage {
+.product-index-item {
+  display: inline-block;
+  width: 120px;
+  height: 175px;
+  margin-top: 0px;
+  margin-left: 24px;
+  margin-right: 24px;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: 300;
+}
 
+.index-productImage {
+  max-height: 100px;
+  min-height: 50px;
+  min-width: 50px;
+  max-width: 100px;
 }
 
 .index-productTitle {
-  margin: 10px;
   text-align: left;
   overflow: hidden;
+  margin-top: 2px;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-style: normal;
 }
 
 .index-productPrice {
-  margin: 10px;
+  margin-top: 4px;
+}
+
+.product-new {
+  border: 2px solid black;
+  border-style: dashed;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.product-input {
+  display: flex;
+  flex-direction: column;
 }
