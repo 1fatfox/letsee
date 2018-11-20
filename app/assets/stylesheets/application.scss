@@ -30,7 +30,7 @@
 .login-signup-nav {
   display: flex;
   flex-direction: row;
-  font-weight:100;
+  font-weight: 100;
   justify-content: space-between;
   padding-left: 18px;
   border-bottom: 1px solid #e2e2e2;
@@ -324,4 +324,14 @@
   padding: 20px;
   border-bottom: 1px solid lightgray;
   display: flex;
+}
+
+.etsy-banner {
+  margin-top: 57px;
+  border-top: 1px solid lightgray;
+  text-align: center;
+  font-size: 32px;
+  font-family: "Guardian-EgypTT",serif;
+  font-weight: 300px;
+  padding-top: 30px;
 }

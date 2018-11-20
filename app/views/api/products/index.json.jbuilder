@@ -1,5 +1,6 @@
 @products.each do |product|
   json.set! product.id do
-    json.extract! product, :id, :title, :description, :image_url, :price, :shop_id
+    json.extract! product, :id, :title, :description, :price, :shop_id
+    json.photoUrl url_for(product.image)
   end
 end
