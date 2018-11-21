@@ -25,12 +25,12 @@ export const removeProduct = (id) => {
   };
 };
 
-const receiveProductErrors = (errors) =>({
+export const receiveProductErrors = (errors) =>({
     type: RECEIVE_PRODUCT_ERRORS,
     errors
 });
 
-const clearProductErrors = () => ({
+export const clearProductErrors = () => ({
   type: CLEAR_PRODUCT_ERRORS
 });
 

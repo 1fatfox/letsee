@@ -9,6 +9,7 @@ class ProductForm extends React.Component {
     this.state = this.props.product;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.handleFile = this.handleFile.bind(this);
   }
 
   handleFile(e) {
@@ -30,10 +31,11 @@ class ProductForm extends React.Component {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append('product[user_id]', this.props.currentUser.id);
     formData.append('product[title]', this.state.title);
     formData.append('product[description]', this.state.description);
     formData.append('product[price]', this.state.price);
+    formData.append('product[owner]', this.props.currentUser);
+    formData.append('product[shop_id]', this.props.currentUser.shop);
 
     if (this.state.imageFile) {
       formData.append('product[image]', this.state.imageFile);
@@ -45,21 +47,22 @@ class ProductForm extends React.Component {
       contentType: false,
       processData: false
     });
-
-
+    this.props.push('/');
   }
 
   update(field){
     return (e) => {
       this.setState({[field]: e.target.value});
     };
+
   }
 
   render () {
+
     return (
-      <div className="product-new">
-        <h1>{this.props.formType}</h1>
-          <form className="create-product-form" onSubmit={this.handleSubmit}>
+      <div className="product-create-update">
+        <h1 className= "product-form-type-header">{this.props.formType}</h1>
+          <form className="product-create-update-form" onSubmit={this.handleSubmit}>
           <div className="product-image-div">
             <label className="product-photos-label">Photos
               <input
@@ -95,15 +98,14 @@ class ProductForm extends React.Component {
                  onChange={this.update('price')}
                />
               </label>
-               <div className="submit-product">
-                <input
-                 className="submit-product-input"
-                 type="submit"
-                 value="Save and Continue"
-                 />
-               </div>
             </div>
-
+            <div className="submit-product">
+              <input
+                className="submit-product-input"
+                type="submit"
+                value="Save and Continue"
+              />
+            </div>
           </form>
       </div>
     );
@@ -113,3 +115,9 @@ class ProductForm extends React.Component {
 
 
 export default withRouter(ProductForm);
+
+// const errors = () => (
+//   this.props.errors.map( (error) =>
+//     <li className="product-error">{error}</li>
+//   )
+// );

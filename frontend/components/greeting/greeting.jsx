@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Dropdown from './user_dropdown_container';
+import YouDropdown from './user_dropdown_container';
+import ShopContainer from '../shop/create_shop_container';
+import UpdateProduct from '../product/update_product_container';
+import MyShopContainer from '../shop/my_shop_container';
 
 
-const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
+const Greeting = ({ currentUser, logout, openModal, demoSignUp, shop }) => {
   const sessionLinks = () => (
     <div>
       <nav className="login-signup-nav">
@@ -19,7 +22,7 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
           </div>
         </div>
       </nav>
-      <h2 className= "etsy-banner" >
+      <h2 className= "etsy-banner">
         <ul>
           <li className="etsy-banner-span">If it’s handcrafted, vintage, custom, or unique, it's on letsee. </li>
         </ul>
@@ -27,19 +30,33 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
     </div>
 
   );
+  let routeToShopProduct;
+  if (shop !== null) {
+    routeToShopProduct = <Link className="sell-on-etsy" to="/products/new">Sell on Etsy</Link>
+  } else {
+    routeToShopProduct = <Link className="sell-on-etsy" to="/shops/new">Sell on Etsy</Link>;
+  }
   const personalGreeting = () => (
     <div>
       <hgroup className="header-group">
         <Link to="/" className='letsee_logo'>letsee </Link>
         <div className="header-right">
-          <Link to="products/new">Sell on Etsy</Link>
-          <div className="dropdown">
+          {routeToShopProduct}
+          <div className="shop-button-greeting">
+            <img className="shop-button-image" src={window.ShopURL}></img>
+            <div className="shop-button-div"><Link to="/users/:user_id/shops/:shopId">Your shop</Link></div>
+          </div>
+          <div className="you-dropdown-greeting">
             <img className="you-dropdown-image" src={window.YouDropdownUrl}></img>
-            <Dropdown/>
+            <div className="you-dropdown"><YouDropdown/></div>
           </div>
         </div>
       </hgroup>
-    <h2 className= "etsy-banner"></h2>
+      <h2 className= "etsy-banner" >
+        <ul>
+          <li className="etsy-banner-span">If it’s handcrafted, vintage, custom, or unique, it's on letsee. </li>
+        </ul>
+      </h2>
     </div>
   );
 
@@ -47,3 +64,8 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp }) => {
 };
 
 export default Greeting;
+
+// <div className="shop-dropdown-greeting">
+//   <ShopDropdown/>
+// </div>
+// <img className="shop-dropdown-image" src={window.YouDropdownUrl}></img>

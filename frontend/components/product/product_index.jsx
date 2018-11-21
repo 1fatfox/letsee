@@ -11,6 +11,7 @@ class ProductIndex extends React.Component {
 
   componentDidMount() {
   this.props.fetchProducts();
+  this.props.fetchShops();
   }
 
   render () {
@@ -18,11 +19,11 @@ class ProductIndex extends React.Component {
     return <ProductIndexItem
         product={product}
         key={product.id}
-      />
+      />;
     });
       return (
         <div>
-          <ul className= "product-index">
+          <ul className= "product-index-ul">
             {products}
           </ul>
         </div>

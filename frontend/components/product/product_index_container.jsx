@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchProducts } from '../../actions/product_actions';
+import { fetchShops } from '../../actions/shop_actions';
 import ProductIndex from './product_index';
 
 const msp = state => {
@@ -10,7 +11,8 @@ const msp = state => {
 
 const mdp = dispatch => {
   return {
-  fetchProducts: () => dispatch(fetchProducts())
+  fetchProducts: () => dispatch(fetchProducts()),
+  fetchShops: () => dispatch(fetchShops())
   };
 };
 

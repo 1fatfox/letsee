@@ -2,11 +2,15 @@ import { connect } from 'react-redux';
 import { logout, demoSignUp } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 import Greeting from './greeting';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
-const msp = ({ session, entities: { users } }) => {
+const msp = (state, ownProps) => {
+  const currentUser = state.entities.users[state.session.id] ? state.entities.users[state.session.id] : "";
+  const shop = state.entities.shops[currentUser.shop] || null;
   return {
-    currentUser: users[session.id]
+    currentUser,
+    shop,
+    push: ownProps.history.push
   };
 };
 

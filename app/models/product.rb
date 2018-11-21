@@ -12,14 +12,14 @@
 #
 
 class Product < ApplicationRecord
-  validates :title, :description, :price, :shop_id, presence: true
+  validates :title, :description, :price, presence: true
   validates :title, uniqueness: true
 
   belongs_to :shop,
     foreign_key: :shop_id,
     class_name: 'Shop'
 
-  has_one :user,
+  has_one :owner,
     through: :shop,
     source: :owner
 

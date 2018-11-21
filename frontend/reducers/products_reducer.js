@@ -1,7 +1,6 @@
 import { RECEIVE_PRODUCTS,
   RECEIVE_PRODUCT,
-  REMOVE_PRODUCT,
-  RECEIVE_PRODUCT_ERRORS
+  REMOVE_PRODUCT
 } from "../actions/product_actions";
 
 import { RECEIVE_CURRENT_USER } from "../actions/session_actions"

@@ -3,54 +3,93 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.product-index {
+.product-index-ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   overflow: scroll;
+  min-width: 980px;
+  height: 90%;
 }
 
 .product-index-item {
+  min-width: 14%;
   display: inline-block;
+  border: 1px solid gray;
   width: 120px;
-  height: 175px;
-  margin-top: 0px;
+  height: 200px;
   margin-left: 24px;
-  margin-right: 24px;
+  margin-right: 0px;
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   font-weight: 300;
+  margin-bottom: 34px;
 }
 
 .index-productImage {
-  max-height: 100px;
-  min-height: 50px;
-  min-width: 50px;
-  max-width: 100px;
+  position: relative;
+  height: 70%;
 }
 
 .index-productTitle {
   text-align: left;
   overflow: hidden;
-  margin-top: 2px;
+  margin-top: 8px;
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   font-style: normal;
+  margin-left: 5px;
+  font-size: 14px;
 }
 
 .index-productPrice {
   margin-top: 4px;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.product-new {
+.index-productShopName {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.product-create-update {
   border: 2px solid black;
   border-style: dashed;
   width: 90%;
   display: flex;
   flex-direction: column;
-  margin: 20px;
 }
 
 .product-input {
   display: flex;
   flex-direction: column;
+  margin: 5px;
+}
+
+.product-form-type-header {
+  margin-top: 0px;
+  margin: 10px;
+  font-weight: 500px;
+  font-size: 26px;
+}
+
+.submit-product {
+  margin: 10px;
+}
+
+
+.shop-product-li {
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 14%;
+  display: inline-block;
+  border: 1px solid gray;
+  width: 120px;
+  height: 200px;
+  margin-left: 24px;
+  margin-right: 0px;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: 300;
+  margin-bottom: 34px;
 }
