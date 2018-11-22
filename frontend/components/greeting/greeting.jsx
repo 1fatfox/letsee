@@ -31,9 +31,12 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp, shop }) => {
 
   );
   let routeToShopProduct;
+  let shopButton;
   if (shop !== null) {
+    shopButton = <div className="shop-button-div"><Link to="/users/:user_id/shops/:shopId">Your shop</Link></div>
     routeToShopProduct = <Link className="sell-on-etsy" to="/products/new">Sell on Etsy</Link>
   } else {
+    shopButton = <div className="shop-button-div"><Link to="/shops/new">Your shop</Link></div>
     routeToShopProduct = <Link className="sell-on-etsy" to="/shops/new">Sell on Etsy</Link>;
   }
   const personalGreeting = () => (
@@ -44,7 +47,7 @@ const Greeting = ({ currentUser, logout, openModal, demoSignUp, shop }) => {
           {routeToShopProduct}
           <div className="shop-button-greeting">
             <img className="shop-button-image" src={window.ShopURL}></img>
-            <div className="shop-button-div"><Link to="/users/:user_id/shops/:shopId">Your shop</Link></div>
+            {shopButton}
           </div>
           <div className="you-dropdown-greeting">
             <img className="you-dropdown-image" src={window.YouDropdownUrl}></img>

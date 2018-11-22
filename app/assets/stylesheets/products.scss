@@ -53,31 +53,6 @@
   font-size: 12px;
 }
 
-.product-create-update {
-  border: 2px solid black;
-  border-style: dashed;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-input {
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-}
-
-.product-form-type-header {
-  margin-top: 0px;
-  margin: 10px;
-  font-weight: 500px;
-  font-size: 26px;
-}
-
-.submit-product {
-  margin: 10px;
-}
-
 
 .shop-product-li {
   margin-left: 10px;
@@ -92,4 +67,65 @@
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   font-weight: 300;
   margin-bottom: 34px;
+}
+
+.product-create-update {
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #faf9f3;
+}
+
+.product-form-type-header {
+  margin-top: 20px;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  height: 61px;
+  background-color: #faf9f3;
+  width: 100%;
+  text-align: center;
+}
+
+
+.submit-product {
+  margin: 10px;
+}
+
+
+.product-input-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  height: 1000px;
+  border: 1px solid lightgray;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #ffffff;
+  padding: 24px;
+}
+
+.product-image-div {
+  margin-bottom: 30px;
+  height: 640px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #ffffff;
+}
+
+.product-photos-label {
+  font-size: 20px;
+}
+
+.product-input-photo {
+  margin-top: 30px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
 }

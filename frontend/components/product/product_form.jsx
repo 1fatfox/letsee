@@ -61,6 +61,7 @@ class ProductForm extends React.Component {
 
     return (
       <div className="product-create-update">
+        <div className="product-create-update-top-square">
         <h1 className= "product-form-type-header">{this.props.formType}</h1>
           <form className="product-create-update-form" onSubmit={this.handleSubmit}>
           <div className="product-image-div">
@@ -73,32 +74,32 @@ class ProductForm extends React.Component {
               />
             </label>
           </div>
-            <div className="product-input">
-              <label className="product-title-label">Title
-               <input
-                 className="product-title-input"
-                 type="text"
-                 value={this.state.title}
-                 onChange={this.update('title')}
-               />
-              </label>
-              <label className="product-description-label">Description
-               <input
-                 className="product-description-input"
-                 type="text"
-                 value={this.state.description}
-                 onChange={this.update('description')}
-               />
-              </label>
-              <label className="product-price-label">Price
-               <input
-                 className="product-price-input"
-                 type="number"
-                 value={this.state.price}
-                 onChange={this.update('price')}
-               />
-              </label>
-            </div>
+          <div className="product-input-div">
+            <label className="product-title-label">Title
+             <input
+               className="product-title-input"
+               type="text"
+               value={this.state.title}
+               onChange={this.update('title')}
+             />
+            </label>
+            <label className="product-description-label">Description
+             <input
+               className="product-description-input"
+               type="text"
+               value={this.state.description}
+               onChange={this.update('description')}
+             />
+            </label>
+            <label className="product-price-label">Price
+             <input
+               className="product-price-input"
+               type="number"
+               value={this.state.price}
+               onChange={this.update('price')}
+             />
+            </label>
+          </div>
             <div className="submit-product">
               <input
                 className="submit-product-input"
@@ -107,6 +108,7 @@ class ProductForm extends React.Component {
               />
             </div>
           </form>
+        </div>
       </div>
     );
   }

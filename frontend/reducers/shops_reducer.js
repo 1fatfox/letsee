@@ -1,5 +1,4 @@
 import { RECEIVE_SHOP, RECEIVE_SHOPS } from "../actions/shop_actions";
-
 import { merge } from 'lodash';
 
 const shopsReducer = (state = {}, action) => {

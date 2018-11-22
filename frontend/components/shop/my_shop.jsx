@@ -9,16 +9,16 @@ class MyShop extends React.Component {
   }
 
   render() {
-    const { products, shop } = this.props;
+    const { products, shop} = this.props;
     return(
-      <div className="single-shop-shop">
+    <div className="myshop">
+      <h2 className="my-shop-name">{shop.name}</h2>
+      <div className="my-single-shop">
         <div>
           <ul>
           {products.map( (product, i) => (
             <li key={i} className="shop-product-li">
-            <div className="my-shop-product-image">
-              {product.image}
-            </div>
+            <img className="my-shop-product-image" src={product.image}/>
               <div className="my-shop-product-title">
                 {product.title}
               </div>
@@ -33,6 +33,7 @@ class MyShop extends React.Component {
           </ul>
         </div>
       </div>
+    </div>
     );
   }
 }

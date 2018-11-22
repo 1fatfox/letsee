@@ -24,10 +24,11 @@ const receiveShopErrors = (errors) =>({
 });
 
 export const fetchShops = () => dispatch => {
-  return APIUtil.fetchShops().then(
+  return (
+    APIUtil.fetchShops().then(
     shops => dispatch(receiveShops(shops)),
     err => dispatch(receiveShopErrors(err.responseJSON))
-  );
+  ));
 };
 
 export const fetchShop = (id) => dispatch => {

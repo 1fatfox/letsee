@@ -12,8 +12,9 @@ class ShopForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createShop(this.state);
-    this.props.push('/products/new');
+    this.props.createShop(this.state).then(() =>
+      this.props.push('/products/new')
+    );
   }
 
   update(field){
@@ -27,9 +28,10 @@ class ShopForm extends React.Component {
     return (
       <div className="shop-create-update">
         <h1 className= "shop-form-type-header">{this.props.formType}</h1>
+          <h3 className="shop-form-sub-header">Choose a memorable name that reflects your style.</h3>
           <form className="shop-create-update-form" onSubmit={this.handleSubmit}>
             <div className="shop-input">
-              <label className="shop-name-label">Name
+              <label className="shop-name-label">
                <input
                  className="shop-name-input"
                  type="text"

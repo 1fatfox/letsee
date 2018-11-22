@@ -101,7 +101,7 @@ class SessionForm extends React.Component {
               {submit_button}
             </div>
             <h2 className="modal-mid-border" ><span>OR</span></h2>
-            <button className="modal-demo-login-button" onClick={() => demoSignUp()}>Demo</button>
+            <input type="submit" className="modal-demo-login-button" onClick={() => this.props.demoSignUp()} value="Demo" />
             {already_a_user}
           </div>
         </form>

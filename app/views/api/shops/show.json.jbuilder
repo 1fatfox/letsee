@@ -2,9 +2,8 @@ json.shop do
   json.extract! @shop, :id, :name, :user_id, :product_ids
 end
 json.shopId @shop.id
-  debugger
 
- if shop.products
+ if @shop.products
    json.products do
       @shop.products.each do |product|
         json.set! product.id do
