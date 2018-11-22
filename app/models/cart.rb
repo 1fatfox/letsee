@@ -12,6 +12,6 @@ class Cart < ApplicationRecord
   validates :user_id, presence: true
 
 
-  has_many :products
+  has_many :cart_products
 
 end
