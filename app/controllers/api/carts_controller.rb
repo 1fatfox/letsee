@@ -13,6 +13,15 @@ class Api::CartController < ApplicationController
     @cart = Cart.find_by(id: params[:id])
   end
 
+  def update
+    @cart = Cart.find_by(id: params[:id])
+    if @cart.update(cart_params)
+      render :show
+    else
+      render json: @cart.errors.full_messages, status: 422
+    end
+  end
+
 
 
   private

@@ -9,10 +9,6 @@ class Api::CartProductsController < ApplicationController
     end
   end
 
-  def show
-    @cart_product = CartProduct.find_by(id: params[:id])
-  end
-
   def destroy
     @cart_product = CartProduct.find_by(id: params[:id])
     if @pcart_roduct.destroy
