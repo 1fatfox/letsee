@@ -23,6 +23,8 @@ class Product < ApplicationRecord
     through: :shop,
     source: :owner
 
+  has_many :cart_product
+
   has_one_attached :image
 
 
