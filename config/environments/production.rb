@@ -41,6 +41,17 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :amazon_prod
 
+
+  config.paperclip_defaults = {
+  storage: :s3,
+  s3_credentials: {
+    bucket: ENV.fetch('my-letsee-dev'),
+    access_key_id: ENV.fetch('AKIAIM7UJKSQX2NLCRQA'),
+    secret_access_key: ENV.fetch('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'),
+    s3_region: ENV.fetch('us-east-1'),
+  }
+}
+
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
