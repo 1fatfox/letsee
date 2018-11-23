@@ -27,5 +27,7 @@ class Product < ApplicationRecord
 
   has_one_attached :image
 
+  has_attached_file :photo
+  # heroku photo
 
 end
