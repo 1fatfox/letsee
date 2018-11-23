@@ -27,7 +27,14 @@ class Product < ApplicationRecord
 
   has_one_attached :image
 
-  has_attached_file :photo
+  has_attached_file :photo, styles: {
+    thumb: '100x100>',
+    square: '200x200#',
+    medium: '300x300>'
+  }
   # heroku photo
+
+  validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
+
 
 end
