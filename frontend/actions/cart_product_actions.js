@@ -38,34 +38,34 @@ export const clearCartProductErrors = () => ({
 export const fetchCartProducts = (cart) => dispatch => {
   return APIUtil.fetchCartProducts(cart).then(
     cartProducts => dispatch(receiveCartProducts(cart_products)),
-    err => dispatch(receiveProductErrors(err.responseJSON))
+    err => dispatch(receiveCartProductErrors(err.responseJSON))
   );
 };
 
 export const fetchProduct = (cartProduct) => dispatch => {
-  return APIUtil.fetchCartProduct(id).then(
-    cartProduct => dispatch(receiveProduct(cartProduct)),
-    error => dispatch(receiveProductErrors(error.responseJSON))
+  return APIUtil.fetchCartProduct(cartProduct).then(
+    cartProduct => dispatch(receiveCartProduct(cartProduct)),
+    error => dispatch(receiveCartProductErrors(error.responseJSON))
   );
 };
 
-export const createProduct = (product) => dispatch => {
-  return API.createProduct(product).then(
-    createdProduct => dispatch(receiveProduct(createdProduct)),
-    error => dispatch(receiveProductErrors(error.responseJSON))
+export const createCartProduct = (cartProduct) => dispatch => {
+  return API.createCartProduct(cartProduct).then(
+    createdCartProduct => dispatch(receiveCartProduct(createdCartProduct)),
+    error => dispatch(receiveCartProductErrors(error.responseJSON))
   );
 };
 
-export const updateProduct = (product) => dispatch => {
-  return API.updateProduct(product).then(
-    updatedProduct => dispatch(receiveProduct(updatedProduct)),
-    error => dispatch(receiveProductErrors(error.responseJSON))
+export const updateCartProduct = (cartProduct) => dispatch => {
+  return API.updateCartProduct(cartProduct).then(
+    updatedCartProduct => dispatch(receiveCartProduct(updatedCartProduct)),
+    error => dispatch(receiveCartProductErrors(error.responseJSON))
   );
 };
 
-export const deleteProduct = (productId) => dispatch => {
-  return API.deleteProduct(productId).then(
-    product => dispatch(removeProduct(productId)),
-    error => dispatch(receiveProductErrors(error.responseJSON))
+export const deleteCartProduct = (cartProductId) => dispatch => {
+  return API.deleteCartProduct(productId).then(
+    cartProduct => dispatch(removeCartProduct(cartProductId)),
+    error => dispatch(receiveCartProductErrors(error.responseJSON))
   );
 };
